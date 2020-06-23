@@ -3,9 +3,13 @@
 Inspired by [jbranchaud/til](https://github.com/jbranchaud/til) and [simonw/til](https://github.com/simonw/til). 
 Python code adapted from original code by [simonw](https://github.com/simonw).
 
-<!-- count starts -->3<!-- count ends --> Snippets in this repository.
+<!-- count starts -->4<!-- count ends --> Snippets in this repository.
 
 <!-- index starts -->
+## cloudflare
+
+* :bookmark: [Dynamic DNS with v4 API](https://github.com/dcerisano/Cloudflare-dynamic-dns)
+
 ## raspberry pi
 
 * :memo: [Headless Setup for Raspberry Pi](https://github.com/wrecker/snippets/blob/master/raspberry_pi/headless-setup.md)
