@@ -26,6 +26,12 @@ But I want to block any traffic thats trying to reach the RPi thats not coming f
   ```bash
   #!/bin/sh
 
+  # clear any existing Cloudflare IP rules
+  for NUM in $(ufw status numbered | grep 'Cloudflare IP' | awk -F '[][]' '{print $2}' | sort -rn | tr --delete [:blank:])
+  do
+    ufw --force delete $NUM
+  done
+
   curl -s https://www.cloudflare.com/ips-v4 -o /tmp/cf_ips
   curl -s https://www.cloudflare.com/ips-v6 >> /tmp/cf_ips
 
