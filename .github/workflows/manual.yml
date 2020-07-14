@@ -1,0 +1,19 @@
+on: 
+  workflow_dispatch:
+    inputs:
+      topic:
+        description: 'Topic'     
+        required: true
+        default: 'UnSorted'
+      url:
+        description: 'Bookmark URL'
+        required: true
+        default: 'https://dev.null'
+        
+ jobs:
+  printInputs:
+    runs-on: ubuntu-latest
+    steps:
+    - run: |
+        echo "Topic: ${{ github.event.inputs.topic }}"
+        echo "URL: ${{ github.event.inputs.url }}"
