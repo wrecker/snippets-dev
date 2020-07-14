@@ -1,3 +1,5 @@
+name: Workflow trigged by dispatch
+
 on: 
   workflow_dispatch:
     inputs:
@@ -10,7 +12,7 @@ on:
         required: true
         default: 'https://dev.null'
         
- jobs:
+jobs:
   printInputs:
     runs-on: ubuntu-latest
     steps:
