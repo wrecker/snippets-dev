@@ -21,11 +21,11 @@ jobs:
     steps:
     - run: |
         topic=${{ github.event.inputs.topic }}
-        title=${{ github.event.inputs.title }}
-        url=${{ github.event.inputs.url }}
-        echo "Topic: $topic"
-        echo "Title" $title"
-        echo "URL: $url"
+        title="${{ github.event.inputs.title }}"
+        url="${{ github.event.inputs.url }}"
+        echo "Topic: ${topic}"
+        echo "Title ${title}"
+        echo "URL: ${url}"
         mkdir -p $topic"
         fname=$(echo "${title}.md" | tr "[:upper:]" "[:lower:]" | tr -s ' ' | tr ' ' '_')
         echo "[${title}](${url})" > ${topic}/$fname
