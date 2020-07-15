@@ -20,10 +20,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
     - run: |
-        echo "Topic: ${{ github.event.inputs.topic }}"
-        echo "Title" ${{ github.event.inputs.title }}"
-        echo "URL: ${{ github.event.inputs.url }}"
-        mkdir -p ${{ github.event.inputs.topic }}"
-        fname=$(echo "${{ github.events.inputs.title }}.md" | tr "[:upper:]" "[:lower:]" | tr -s ' ' | tr ' ' '_')
-        echo "[${{ github.events.inputs.title }}](${{ github.events.inputs.url }})" > ${{ github.event.inputs.topic }}/$fname
+        topic=${{ github.event.inputs.topic }}
+        title=${{ github.event.inputs.title }}
+        url=${{ github.event.inputs.url }}
+        echo "Topic: $topic"
+        echo "Title" $title"
+        echo "URL: $url"
+        mkdir -p $topic"
+        fname=$(echo "${title}.md" | tr "[:upper:]" "[:lower:]" | tr -s ' ' | tr ' ' '_')
+        echo "[${title}](${url})" > ${topic}/$fname
         ls -l ${{ github.event.inputs.topic }}
