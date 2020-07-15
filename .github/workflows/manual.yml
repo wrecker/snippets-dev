@@ -7,6 +7,9 @@ on:
         description: 'Topic'     
         required: true
         default: 'UnSorted'
+      title:
+        description: 'Bookmark Title'
+        required: true
       url:
         description: 'Bookmark URL'
         required: true
@@ -18,4 +21,9 @@ jobs:
     steps:
     - run: |
         echo "Topic: ${{ github.event.inputs.topic }}"
+        echo "Title" ${{ github.event.inputs.title }}"
         echo "URL: ${{ github.event.inputs.url }}"
+        mkdir -p ${{ github.event.inputs.topic }}"
+        fname=$(echo "${{ github.events.inputs.title }}.md" | tr "[:upper:]" "[:lower:]" | tr -s ' ' | tr ' ' '_')
+        echo "[${{ github.events.inputs.title }}](${{ github.events.inputs.url }})" > ${{ github.event.inputs.topic }}/$fname
+        ls -l ${{ github.event.inputs.topic }}
