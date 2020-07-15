@@ -19,14 +19,20 @@ jobs:
   printInputs:
     runs-on: ubuntu-latest
     steps:
-    - run: |
-        topic=${{ github.event.inputs.topic }}
-        title="${{ github.event.inputs.title }}"
-        url="${{ github.event.inputs.url }}"
-        echo "Topic: ${topic}"
-        echo "Title ${title}"
-        echo "URL: ${url}"
-        mkdir -p $topic
-        fname=$(echo "${title}.md" | tr "[:upper:]" "[:lower:]" | tr -s ' ' | tr ' ' '_')
-        echo "[${title}](${url})" > ${topic}/$fname
-        ls -l ${{ github.event.inputs.topic }}
+      - name: "Create url file"
+        run: |
+          topic=${{ github.event.inputs.topic }}
+          title="${{ github.event.inputs.title }}"
+          url="${{ github.event.inputs.url }}"
+          echo "Topic: ${topic}"
+          echo "Title ${title}"
+          echo "URL: ${url}"
+          mkdir -p $topic
+          fname=$(echo "${title}.url.md" | tr "[:upper:]" "[:lower:]" | tr -s ' ' | tr ' ' '_')
+          echo "[${title}](${url})" > ${topic}/$fname
+          ls -l ${{ github.event.inputs.topic }}
+          git diff
+          git config --global user.email "readme-bot@github.bot"
+          git config --global user.name "README-bot"
+          git diff --quiet || (git add ${topic}/$fname && git commit -m "Add Bookmark from Slack")
+          git push
