@@ -26,7 +26,7 @@ jobs:
         echo "Topic: ${topic}"
         echo "Title ${title}"
         echo "URL: ${url}"
-        mkdir -p $topic"
+        mkdir -p $topic
         fname=$(echo "${title}.md" | tr "[:upper:]" "[:lower:]" | tr -s ' ' | tr ' ' '_')
         echo "[${title}](${url})" > ${topic}/$fname
         ls -l ${{ github.event.inputs.topic }}
