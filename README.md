@@ -3,7 +3,7 @@
 Inspired by [jbranchaud/til](https://github.com/jbranchaud/til) and [simonw/til](https://github.com/simonw/til). 
 Python code adapted from original code by [simonw](https://github.com/simonw).
 
-<!-- count starts -->4<!-- count ends --> Snippets in this repository.
+<!-- count starts -->5<!-- count ends --> Snippets in this repository.
 
 <!-- index starts -->
 ## cloudflare
@@ -14,6 +14,10 @@ Python code adapted from original code by [simonw](https://github.com/simonw).
 
 * :memo: [Headless Setup for Raspberry Pi](https://github.com/wrecker/snippets/blob/master/raspberry_pi/headless-setup.md)
 * :bookmark: [Secure Headless Desktop setup](https://www.instructables.com/id/Raspberry-Pi-Desktop-Secure-Headless-Setup-Without/)
+
+## systemd
+
+* :bookmark: [Run Service as user](https://askubuntu.com/questions/676007/how-do-i-make-my-systemd-service-run-via-specific-user-and-start-on-boot/676022#676022)
 
 ## ufw
 
