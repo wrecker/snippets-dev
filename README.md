@@ -3,12 +3,16 @@
 Inspired by [jbranchaud/til](https://github.com/jbranchaud/til) and [simonw/til](https://github.com/simonw/til). 
 Python code adapted from original code by [simonw](https://github.com/simonw).
 
-<!-- count starts -->6<!-- count ends --> Snippets in this repository.
+<!-- count starts -->7<!-- count ends --> Snippets in this repository.
 
 <!-- index starts -->
 ## cloudflare
 
 * :bookmark: [Dynamic DNS with v4 API](https://github.com/dcerisano/Cloudflare-dynamic-dns)
+
+## linux
+
+* :bookmark: [On the Fly Multi-boot Linux Installers on USB](https://www.techrepublic.com/article/how-to-create-an-on-the-fly-flash-drive-with-bootable-linux-distributions/)
 
 ## raspberry pi
 
