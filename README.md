@@ -16,7 +16,7 @@ Python code adapted from original code by [simonw](https://github.com/simonw).
 
 ## raspberry pi
 
-* :memo: [Headless Setup for Raspberry Pi](https://github.com/wrecker/snippets/blob/master/raspberry_pi/headless-setup.md)
+* :memo: [Headless Setup for Raspberry Pi](https://github.com/wrecker/snippets-dev/blob/master/raspberry_pi/headless-setup.md)
 * :bookmark: [Secure Headless Desktop setup](https://www.instructables.com/id/Raspberry-Pi-Desktop-Secure-Headless-Setup-Without/)
 
 ## systemd
@@ -26,5 +26,5 @@ Python code adapted from original code by [simonw](https://github.com/simonw).
 
 ## ufw
 
-* :memo: [Only Allow Traffic from Cloudflare's IP Addresses](https://github.com/wrecker/snippets/blob/master/ufw/restrict_to_cloudflare_ips.md)
+* :memo: [Only Allow Traffic from Cloudflare's IP Addresses](https://github.com/wrecker/snippets-dev/blob/master/ufw/restrict_to_cloudflare_ips.md)
 <!-- index ends -->
